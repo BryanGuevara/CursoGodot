@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs0fqnsqodxco"]
+
+[ext_resource type="PackedScene" uid="uid://bfnfl758mip8a" path="res://suelo.tscn" id="1_3v87a"]
+[ext_resource type="Script" path="res://CameraDollow.gd" id="2_hbuac"]
+[ext_resource type="PackedScene" uid="uid://cuq1xe1ivhull" path="res://Personaje.tscn" id="2_o0727"]
+[ext_resource type="PackedScene" uid="uid://di28f56w7isd6" path="res://Barril.tscn" id="3_x1rj0"]
+
+[node name="Level" type="Node2D"]
+position = Vector2(16, -2)
+scale = Vector2(0.96, 0.934419)
+
+[node name="Personaje" parent="." instance=ExtResource("2_o0727")]
+position = Vector2(78, 576)
+
+[node name="Camera2D" type="Camera2D" parent="Personaje"]
+position = Vector2(505.333, -229.26)
+rotation = -3.14159
+scale = Vector2(4.20442, -0.042327)
+script = ExtResource("2_hbuac")
+
+[node name="Barril2" parent="." instance=ExtResource("3_x1rj0")]
+position = Vector2(511, 163)
+
+[node name="Barril" parent="." instance=ExtResource("3_x1rj0")]
+position = Vector2(73, 289)
+
+[node name="Barril3" parent="." instance=ExtResource("3_x1rj0")]
+position = Vector2(754, 501)
+rotation = -2.06672
+
+[node name="Suelos" type="Node2D" parent="."]
+position = Vector2(262, 356)
+rotation = 0.0778356
+scale = Vector2(3.12197, 2.36339)
+
+[node name="Plataforma3" parent="Suelos" instance=ExtResource("1_3v87a")]
+position = Vector2(88.3543, -76.1591)
+rotation = -0.325337
+scale = Vector2(0.786078, 0.417556)
+skew = 0.134381
+
+[node name="Plataforma2" parent="Suelos" instance=ExtResource("1_3v87a")]
+
+[node name="Plataforma" parent="Suelos" instance=ExtResource("1_3v87a")]
+position = Vector2(44.9576, 92.1329)
+rotation = -0.23363
+scale = Vector2(1.29616, 0.420273)
+skew = 0.0980881

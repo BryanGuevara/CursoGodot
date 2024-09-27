@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://di28f56w7isd6"]
+
+[ext_resource type="Texture2D" uid="uid://sgih1g4a8qcx" path="res://kenney_scribble-platformer/PNG/Default/effect_blast.png" id="1_5mbct"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mc65c"]
+radius = 19.0
+
+[node name="Barril" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5mbct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mc65c")

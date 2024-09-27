@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfnfl758mip8a"]
+
+[ext_resource type="Texture2D" uid="uid://vu0gjld8uwi0" path="res://kenney_scribble-platformer/PNG/Default/effect_shotLarge.png" id="1_vt0ju"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5wkr"]
+size = Vector2(369, 20)
+
+[node name="Plataforma" type="StaticBody2D"]
+
+[node name="TileArch" type="Sprite2D" parent="."]
+position = Vector2(67, -6)
+scale = Vector2(6, 1)
+texture = ExtResource("1_vt0ju")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(68.5, -1)
+shape = SubResource("RectangleShape2D_s5wkr")
